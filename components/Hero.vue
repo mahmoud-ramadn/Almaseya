@@ -13,7 +13,7 @@
       <div class="relative lg:mr-52 lg:max-w-[364px] min-w-48 mt-4 w-full">
         <input
           type="text"
-          class="h-11 w-full rounded-full bg-transparent border pr-4 border-white placeholder:font-medium placeholder:text-gray-500"
+          class="h-11 w-full rounded-full bg-transparent border pr-4 text-white border-white placeholder:font-medium placeholder:text-gray-500"
           placeholder="بحث"
           aria-label="Search"
         />
