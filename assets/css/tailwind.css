@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply overflow-x-hidden  font-noto;
+}
+a {
+  @apply transition-all duration-200 hover:text-blue-600;
+}
