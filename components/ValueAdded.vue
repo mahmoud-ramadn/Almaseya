@@ -1,5 +1,5 @@
 <template>
-  <section class="lg:max-w-[1257px] w-full mx-auto   px-4  py-16 lg:py-32">
+  <section class="lg:max-w-[1288px] w-full mx-auto   px-4  py-16 lg:py-32">
     <ui-title title="القيمة المضافة" />
     <div
       class="flex gap-x-[135px] gap-y-12 justify-center  items-center md:flex-row flex-col flex-wrap mt-24"
