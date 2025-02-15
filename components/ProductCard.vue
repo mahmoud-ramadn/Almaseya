@@ -9,7 +9,7 @@
       class="bg-gray-50 rounded-[2rem] relative overflow-hidden shadow-lg mt-12 h-[138px] group-hover:h-[262px] transition-all duration-300 border-b-8 border-blue-500"
     >
       <div
-        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+        class="absolute inset-x-0 bottom-0  px-5 pb-8 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
       >
         <p class="text-blue-500 text-2xl font-medium text-center">
           {{ product.description }}
