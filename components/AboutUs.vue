@@ -66,7 +66,7 @@
     </div>
     <span
       @click="scrollToNextSection"
-      class="fixed border-orange-400 cursor-pointer right-11 top-[84%] w-[77px] outline-t outline-2 z-50 outline-offset-4  md:block hidden outline-blue-500 outline-dashed bg-blue-600 rounded-full h-[77px] flex items-center justify-center"
+      class="fixed border-orange-400 cursor-pointer right-11 top-[84%] w-[77px] outline-t outline-2 z-50 outline-offset-4  md:flex hidden outline-blue-500 outline-dashed bg-blue-600 rounded-full h-[77px]  items-center justify-center"
     >
       <img src="@/assets/icons/svg/arrowdown.svg" alt="arrow" class="size-6" />
     </span>
