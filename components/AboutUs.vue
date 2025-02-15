@@ -1,63 +1,53 @@
 <template>
   <section
-    class="bg-[url('@/assets/images/background.webp')] w-full pt-16 px-4 bg-no-repeat bg-cover "
+    class="bg-[url('@/assets/images/background.webp')] w-full pt-16 px-4 bg-no-repeat bg-cover"
   >
     <div
-      class="container  grid  lg:grid-cols-[1fr,282px,]  md:grid-cols-2 grid-cols-1 gap-6  px-0   "
+      class="container grid lg:grid-cols-[1fr,282px,] md:grid-cols-2 grid-cols-1 gap-6 px-0"
     >
+      <div class="relative flex justify-end lg:max-h-[509px] overflow-hidden">
+        <div
+          class="absolute text-white lg:max-w-[687px] lg:left-[186px] z-10 overflow-hidden lg:h-[440px] h-fit top-1/2 -translate-y-1/2 rounded-2xl bg-blue-600/75 backdrop-blur-md p-6"
+        >
+          <h2 class="text-xl lg:text-2xl font-bold mb-4">من نحن</h2>
+          <p class="text-sm lg:text-lg leading-relaxed mb-8">
+            نحن مصنع متخصص لانواع الثلاجات من مبردات وثلاجات عرض السوبرماركت
+            وغرف التبريد والتجميد واللحوم وثلاجات المواني واجهزة تنقية الهواء
+            واعمال التكيف والتكييف. يقع المصنع في هيئة المدن الصناعية بخميس مشيط
+            على مساحة 11000 م احدى عشر الف متر . وتوجد لنا تنافس المنتجات
+            الاوربية والامريكية وخبرة بعض موظفينا تتجاوز الثلاثين سنة.
+          </p>
+          <h2 class="text-xl lg:text-2xl font-bold mb-4">رؤيتنا</h2>
+          <p class="text-sm lg:text-lg leading-relaxed">
+            أن نكون المصنع الأول في العالم العربي في التبريد واجهزة تنقية الهواء
+            بأعلى معايير الجودة والتميز
+          </p>
+        </div>
 
-        <div class="  relative  flex justify-end   lg:max-h-[509px] overflow-hidden">
-           <div
-            class="absolute text-white lg:max-w-[687px] lg:left-[186px] z-10 overflow-hidden lg:h-[440px]  h-fit  top-1/2 -translate-y-1/2 rounded-2xl bg-blue-600/75 backdrop-blur-md p-6"
-          >
-            <h2 class="text-xl lg:text-2xl font-bold mb-4">من نحن</h2>
-            <p class="text-sm lg:text-lg leading-relaxed mb-8">
-              نحن مصنع متخصص لانواع الثلاجات من مبردات وثلاجات عرض السوبرماركت
-              وغرف التبريد والتجميد واللحوم وثلاجات المواني واجهزة تنقية الهواء
-              واعمال التكيف والتكييف. يقع المصنع في هيئة المدن الصناعية بخميس
-              مشيط على مساحة 11000 م احدى عشر الف متر . وتوجد لنا تنافس المنتجات
-              الاوربية والامريكية وخبرة بعض موظفينا تتجاوز الثلاثين سنة.
-            </p>
-            <h2 class="text-xl lg:text-2xl font-bold mb-4">رؤيتنا</h2>
-            <p class="text-sm lg:text-lg leading-relaxed">
-              أن نكون المصنع الأول في العالم العربي في التبريد واجهزة تنقية
-              الهواء بأعلى معايير الجودة والتميز
-            </p>
-          </div> 
+        <img
+          src="@/assets/images/Rectangle 17.webp"
+          alt="rectangle"
+          class="h-full w-full rounded-2xl object-cover lg:max-w-[333px]"
+        />
+      </div>
 
+      <div class="flex flex-col gap-4 lg:max-h-[509px] overflow-hidden">
+        <div class="basis-3/4 rounded-2xl overflow-hidden">
           <img
-            src="@/assets/images/Rectangle 17.webp"
+            src="@/assets/images/Rectangle 19.webp"
             alt="rectangle"
-            class="h-full w-full rounded-2xl object-cover lg:max-w-[333px]"
+            class="h-full w-full aspect-auto object-cover"
           />
         </div>
-
-
-    
-
-        <div class="  flex flex-col gap-4    lg:max-h-[509px] overflow-hidden ">
-          <div class="basis-3/4 rounded-2xl overflow-hidden">
-            <img
-              src="@/assets/images/Rectangle 19.webp"
-              alt="rectangle"
-              class="h-full w-full aspect-auto  object-cover"
-            />
-          </div>
-          <div class="basis-1/4 rounded-2xl overflow-hidden">
-            <img
-              src="@/assets/images/Rectangle 18.webp"
-              alt="rectangle"
-              class="h-full w-full aspect-auto  object-cover"
-            />
-          </div>
+        <div class="basis-1/4 rounded-2xl overflow-hidden">
+          <img
+            src="@/assets/images/Rectangle 18.webp"
+            alt="rectangle"
+            class="h-full w-full aspect-auto object-cover"
+          />
         </div>
-        
+      </div>
     </div>
-
-
-
-
-
     <div class="flex lg:flex-row flex-col justify-center py-12 gap-20">
       <div class="text-center">
         <h1 class="font-bold text-blue-500 text-7xl leading-relaxed">+14</h1>
@@ -74,5 +64,27 @@
         <p class="font-medium text-blue-500">سنة خبره في المجال</p>
       </div>
     </div>
+    <span
+      @click="scrollToNextSection"
+      class="fixed border-orange-400 cursor-pointer right-11 top-[84%] w-[77px] outline-t outline-2 z-50 outline-offset-4 outline-blue-500 outline-dashed bg-blue-600 rounded-full h-[77px] flex items-center justify-center"
+    >
+      <img src="@/assets/icons/svg/arrowdown.svg" alt="arrow" class="size-6" />
+    </span>
   </section>
 </template>
+
+<script>
+export default {
+  methods: {
+    scrollToNextSection() {
+      const nextSection = document.getElementById("next-section");
+      if (nextSection) {
+        window.scrollTo({
+          top: nextSection.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    },
+  },
+};
+</script>

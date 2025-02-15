@@ -1,5 +1,5 @@
 <template>
-  <div class="group relative">
+  <div  class="group relative">
     <img
       :src="product.image"
       :alt="product.name"
