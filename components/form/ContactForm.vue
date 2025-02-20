@@ -1,6 +1,6 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="w-full rounded-lg p-8">
-    <div class="space-y-8 text-center">
+  <form @submit.prevent="handleSubmit" class="w-full rounded-lg ">
+    <div class="space-y-5 text-center">
       <FormInput
         id="name"
         placholder="الاسم"

@@ -10,7 +10,7 @@
           class="absolute text-white lg:max-w-[687px] lg:left-[186px] z-10 overflow-hidden lg:h-[440px] h-fit top-1/2 -translate-y-1/2 rounded-2xl bg-blue-600/75 backdrop-blur-md p-6"
         >
           <h2 class="text-xl lg:text-2xl font-bold mb-4">من نحن</h2>
-          <p class="text-sm lg:text-lg leading-relaxed mb-8">
+          <p class="text-sm lg:text-lg leading-relaxed mb-8 px-4 ">
             نحن مصنع متخصص لانواع الثلاجات من مبردات وثلاجات عرض السوبرماركت
             وغرف التبريد والتجميد واللحوم وثلاجات المواني واجهزة تنقية الهواء
             واعمال التكيف والتكييف. يقع المصنع في هيئة المدن الصناعية بخميس مشيط
@@ -18,7 +18,7 @@
             الاوربية والامريكية وخبرة بعض موظفينا تتجاوز الثلاثين سنة.
           </p>
           <h2 class="text-xl lg:text-2xl font-bold mb-4">رؤيتنا</h2>
-          <p class="text-sm lg:text-lg leading-relaxed">
+          <p class="text-sm lg:text-lg leading-relaxed px-4">
             أن نكون المصنع الأول في العالم العربي في التبريد واجهزة تنقية الهواء
             بأعلى معايير الجودة والتميز
           </p>
