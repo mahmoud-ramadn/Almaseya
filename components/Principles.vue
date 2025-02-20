@@ -25,7 +25,7 @@ const principles = [
        class="border-r-[10px] border-white  w-full  border-b-[9px] rounded-2xl  object-cover aspect-[3/4]  z-10    h-full "
      />
     </div>
-       <div class="    lg:col-span-2 col-span-1 lg:flex-row flex-col     gap-y-6  justify-end     w-full flex items-center  h-full  px-4 ">
+       <div class="    lg:col-span-2 col-span-1 lg:flex-row flex-col     gap-y-6 justify-center     w-full flex items-center  h-full  px-4 ">
         <div class="  space-y-7   lg:max-w-[273px] w-full ">
           <princple-item
             v-for="(principle, index) in principles.slice(0, 3)"
