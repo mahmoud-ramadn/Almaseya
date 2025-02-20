@@ -14,9 +14,9 @@ const principles = [
     <ui-title title="المبادئ" />
     <div class="text-center       grid  lg:grid-cols-4 grid-cols-1   gap-y-10  mt-8   mx-0   p-0 h-full    "
     >
-    <div class="  col-span-2   relative   flex justify-center items-center     pr-[25%]  py-8   lg:h-[475px] md:h-[400px] h-[380px] ">
+    <div class="  col-span-2   relative   flex justify-center items-center     lg:pr-[25%] pr-[10%]  py-8   lg:h-[475px] md:h-[400px] h-[300px] ">
       <div
-        class="bg-[url('@/assets/images/market.webp')]   bg-no-repeat bg-cover  absolute right-0  z-10   top-0     w-[61%]   bg-center  py-16  h-full    "
+        class="bg-[url('@/assets/images/market.webp')]   bg-no-repeat bg-cover  absolute right-0  z-10   top-0     lg:w-[61%] md:w-[70%] xs-w-[80%]  w-[45%]  bg-center  py-16  h-full    "
       >
     </div>
     <img
