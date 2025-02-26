@@ -10,6 +10,6 @@
 <script setup lang="ts">
 defineProps<{
   title: string;
-  customClass?: string; // Allow external class overrides
+  customClass?: string;
 }>();
 </script>

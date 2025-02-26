@@ -1,8 +1,10 @@
 <template>
-  <Dialog >
-  <DialogTrigger class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 hover:opacity-100 hover:scale-100">
-  <img src="@/assets/icons/svg/vidoe-play.svg" alt="play" />
-</DialogTrigger>
+  <Dialog>
+    <DialogTrigger
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 hover:opacity-100 hover:scale-100"
+    >
+      <img src="@/assets/icons/svg/vidoe-play.svg" alt="play" />
+    </DialogTrigger>
     <DialogContent
       class="lg:max-w-[1000px] w-full flex justify-center items-center bg-white/20 p-4"
     >

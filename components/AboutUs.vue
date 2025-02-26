@@ -91,12 +91,12 @@
         <p class="font-medium fill-current">سنة خبره في المجال</p>
       </div>
     </div>
-    <span
+    <div
       @click="scrollToNextSection"
-      class="fixed cursor-pointer right-11 top-[84%] w-[57px] outline-t outline-2 z-50 outline-offset-4 md:flex hidden outline-purple-900 outline-dashed bg-purple-900 rounded-full h-[77px] items-center justify-center"
+      class="fixed cursor-pointer right-11 top-[84%] circle outline-t-2 z-50 outline-offset-4 flex items-center justify-center md:flex hidden outline-purple-900 outline-dashed bg-purple-900 rounded-full h-[77px] items-center justify-center"
     >
       <img src="@/assets/icons/svg/arrowdown.svg" alt="arrow" class="size-6" />
-    </span>
+    </div>
   </section>
 </template>
 
@@ -111,3 +111,11 @@ function scrollToNextSection() {
   }
 }
 </script>
+
+<style lang="css" scoped>
+.circle {
+  border-radius: 50%;
+  width: 57px;
+  height: 77px;
+}
+</style>

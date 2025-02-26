@@ -30,29 +30,26 @@
             >
               <slot :item="item" />
             </SwiperSlide>
-                <div
-                v-if="arrows"
-                class="  py-10 flex justify-center arrows  items-start space-x-4 rtl:space-x-reverse"
+            <div
+              v-if="arrows"
+              class="py-10 flex justify-center arrows items-start space-x-4 rtl:space-x-reverse"
+            >
+              <button
+                @click="swiper?.slidePrev()"
+                :class="{ 'active-button': swiper?.isBeginning }"
+                class="border-2 border-white size-10 flex justify-center items-center rounded-full text-white disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
               >
-                <button
-                  @click="swiper?.slidePrev()"
-                  :class="{ 'active-button': swiper?.isBeginning }"
-                  class="border-2 border-white size-10 flex justify-center items-center rounded-full text-white  disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
-                >
-                  <svg-icon name="arrow-right" class="text-current" />
-                </button>
+                <svg-icon name="arrow-right" class="text-current" />
+              </button>
 
-                <button
-                  @click="swiper?.slideNext()"
-                  :class="{ 'active-button': swiper?.isEnd }"
-                  class="border-2 border-white size-10 flex justify-center items-center text-white rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
-                >
-                  <svg-icon
-                    name="arrow-right"
-                    class="text-current rotate-180"
-                  />
-                </button>
-              </div>
+              <button
+                @click="swiper?.slideNext()"
+                :class="{ 'active-button': swiper?.isEnd }"
+                class="border-2 border-white size-10 flex justify-center items-center text-white rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
+              >
+                <svg-icon name="arrow-right" class="text-current rotate-180" />
+              </button>
+            </div>
           </Swiper>
         </div>
       </div>
@@ -171,8 +168,8 @@ const onSwiperLoad = (value: SwiperInstance) => {
 }
 
 .active-button {
-  background-color:white;
-  color:#9747FF;
+  background-color: white;
+  color: #9747ff;
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }

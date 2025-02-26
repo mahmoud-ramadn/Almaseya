@@ -2,10 +2,10 @@
   <div :class="cn(' mb-10  relative', $attrs.class)">
     <div class="">
       <swiper-wrapper
-        class="feedbackSlider  lg:px-0  px-4  "
-        :items="[1, 2, 3, 4,5]"
+        class="feedbackSlider lg:px-0 px-4"
+        :items="[1, 2, 3, 4, 5]"
         :options="swiperOptions"
-       :arrows=true
+        :arrows="true"
       >
         <template #default="">
           <client-card />
@@ -16,19 +16,19 @@
 </template>
 
 <script setup lang="ts">
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 const swiperOptions = {
-    autoPlay: true,
+  autoPlay: true,
   loop: true,
   breakpoints: {
     2500: {
-      slidesPerView:3.5,
+      slidesPerView: 3.5,
       spaceBetween: 16,
       centeredSlides: true,
     },
     1081: {
-      slidesPerView:3,
+      slidesPerView: 3,
       spaceBetween: 16,
       centeredSlides: true,
     },
@@ -41,24 +41,6 @@ const swiperOptions = {
       spaceBetween: 15,
     },
   },
-  pagination:false,
-}
+  pagination: false,
+};
 </script>
-
-<!-- <style lang="postcss">
-.feedbackSlider {
-  .swiper-wrapper {
-    @screen lg {
-      @apply py-20;
-    }
-  }
-  .swiper-slide {
-    @screen lg {
-      @apply transition-all duration-300 blur;
-      &-active {
-        @apply blur-none scale-[1.3] shadow-xl shadow-gray-400/5;
-      }
-    }
-  }
-}
-</style> -->
