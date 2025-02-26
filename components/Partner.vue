@@ -6,7 +6,7 @@
       :options="swiperOptions"
     >
       <template #default="{item}" >
-        <div class=" flex items-center gap-x-3    lg:cursor-pointer cursor-grab ">
+        <div :key="item.id" class=" flex items-center gap-x-3    lg:cursor-pointer cursor-grab ">
           <img
             :src="item?.image"
             :alt="item.id"
