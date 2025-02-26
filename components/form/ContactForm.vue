@@ -37,7 +37,7 @@
 
       <button
         type="submit"
-        class="bg-blue-600 font-bold text-white py-4 lg:w-fit w-full lg:px-36 rounded-md hover:bg-blue-700"
+        class=" bg-purple-900 font-bold text-white py-4 lg:w-fit w-full lg:px-36 rounded-md hover:bg-blue-700"
       >
         ارسل الآن
       </button>

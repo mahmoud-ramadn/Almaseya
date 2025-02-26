@@ -1,9 +1,10 @@
 <template>
   <section
-    class="relative bg-[url('@/assets/images/hero.webp')] w-full bg-no-repeat bg-cover lg:pb-48 pt-6 after:absolute after:bg-black/70 after:left-0 after:top-0 after:w-full after:h-full after:content-[''] after:z-[1]"
+    class="relative bg-[url('@/assets/images/hero.webp')] w-full bg-no-repeat bg-cover lg:pb-48 pt-6 after:absolute after:bg-gradient-purple after:left-0 after:top-0 after:w-full after:h-full after:content-[''] after:z-[1]"
   >
-     <Search/>
-    <div class="relative z-10 text-center mt-32 px-4">
+  <NavigationBar/>
+
+  <div class="relative z-10 text-center mt-32 px-4">
       <h1 class="font-bold lg:text-5xl text-3xl text-white">
         ريادة في صناعة التبريد والتكييف بخبرة عالمية
       </h1>
@@ -12,7 +13,7 @@
       </p>
       <button
         @click="scrollToNextSection"
-        class="text-blue-600 text-base my-10 rounded-lg bg-white font-semibold py-4 px-8"
+        class=" text-purple-900 text-base my-10 rounded-lg bg-white font-semibold py-4 px-8"
         aria-label="تواصل معنا الان"
       >
         تواصل معنا الان

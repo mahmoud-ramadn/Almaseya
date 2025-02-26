@@ -1,9 +1,9 @@
 <template>
-  <p class="flex items-center gap-x-4">
+  <p class="flex items-center text-purple-900 gap-x-4">
     <img
       src="@/assets/icons/svg/star.svg"
       alt="star"
-      class="size-6 text-blue-500"
+      class="size-6 "
     />
     {{ text }}
   </p>

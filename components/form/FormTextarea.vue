@@ -12,7 +12,7 @@
       :class="[
         error
           ? 'border border-red-500 focus:border-red-500 focus:ring focus:ring-red-500/55 focus:ring-opacity-50'
-          : 'border border-gray-100 focus:border-blue-500 focus:ring focus:ring-blue-500/60 focus:ring-opacity-50',
+          : 'border border-gray-100 focus:border-blue-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50',
       ]"
       :placeholder="placholder"
     ></textarea>

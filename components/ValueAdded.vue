@@ -1,5 +1,5 @@
 <template>
-  <section  class="lg:max-w-[1288px] w-full mx-auto   px-4  py-16 lg:py-32">
+  <section id="value-added"  class="lg:max-w-[1288px] w-full mx-auto   px-4  py-16 lg:py-32">
     <ui-title title="القيمة المضافة" />
     <div
       class="flex gap-x-[135px] gap-y-12 justify-center  items-center md:flex-row flex-col flex-wrap mt-24"
@@ -9,7 +9,7 @@
         :key="index"
         class=" max-w-[213px]  text-center space-y-4 "
       >
-        <SvgIcon :name="item.icon" class="size-10 fill-blue-500 mx-auto" />
+        <SvgIcon :name="item.icon" class="size-10 fill-purple-900  mx-auto" />
         <p class=" font-medium text-base lg:text-lg">
           {{ item.title }}
         </p>

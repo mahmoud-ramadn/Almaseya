@@ -10,7 +10,7 @@ const principles = [
 </script>
 
 <template>
-  <section class="py-12 pb-12  bg-gray-200">
+  <section id="principles" class="py-12 pb-12  bg-gray-200">
     <ui-title title="المبادئ" />
     <div class="text-center       grid  lg:grid-cols-4 grid-cols-1   gap-y-10  mt-8   mx-0   p-0 h-full    "
     >
@@ -22,7 +22,7 @@ const principles = [
     <img
        src="@/assets/images/principles.webp"
        alt="Principles Illustration"
-       class="border-r-[10px] border-white  w-[90%]  border-b-[9px] rounded-2xl  object-cover z-10     h-[81%] "
+       class="border-r-[10px] border-white  w-[90%]  border-b-[9px] rounded  object-cover z-10     h-[81%] "
      />
     </div>
        <div class="    lg:col-span-2  col-span-1 lg:flex-row flex-col     gap-y-6 justify-center     w-full flex items-center  h-full  px-4 ">
