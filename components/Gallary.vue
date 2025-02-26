@@ -1,7 +1,7 @@
 <template>
   <div id="gallary-card" class="container lg:px-0 px-4 mb-32">
     <ui-title title="معرض الصور" />
-    <div class="flex justify-center space-x-4 rtl:space-x-reverse pt-6 pb-20">
+    <div class="flex justify-center flex-wrap space-x-4 rtl:space-x-reverse pt-6 pb-20">
       <button
         v-for="(tab, index) in tabs"
         :key="index"

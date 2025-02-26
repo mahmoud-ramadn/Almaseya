@@ -6,9 +6,9 @@
       <img src="@/assets/icons/svg/vidoe-play.svg" alt="play" />
     </DialogTrigger>
     <DialogContent
-      class="lg:max-w-[1000px] w-full flex justify-center items-center bg-white/20 p-4"
+      class="lg:max-w-[500px]  w-3/4 flex justify-center items-center  bg-purple-900 p-4"
     >
-      <video autoplay loop muted class="rounded-lg">
+      <video autoplay loop controls muted class="rounded-lg">
         <source src="/videos/frame.mp4" type="video/mp4" />
       </video>
     </DialogContent>
@@ -19,10 +19,6 @@
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 </script>

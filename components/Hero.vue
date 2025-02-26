@@ -12,9 +12,8 @@
         جودة عالمية بخبرة 30 عامًا في تصنيع الثلاجات، غرف التبريد، والتكييف
       </p>
       <button
-        @click="scrollToNextSection"
-        class=" text-purple-900 text-base my-10 rounded-lg bg-white font-semibold py-4 px-8"
-        aria-label="تواصل معنا الان"
+        class=" text-purple-900  cursor-pointer text-base my-10 rounded-lg bg-white font-semibold py-4 px-8"
+            @click="scrollToNextSection"
       >
         تواصل معنا الان
       </button>

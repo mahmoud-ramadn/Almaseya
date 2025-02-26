@@ -11,12 +11,13 @@
     >
       <svg-icon name="whatsapp" class="size-10" />
     </a>
+
     <div
       class="container grid lg:grid-cols-[1fr,282px,] md:grid-cols-2 grid-cols-1 gap-6 px-0"
     >
-      <div class="relative flex justify-end lg:max-h-[509px] overflow-hidden">
+      <div class="relative flex justify-end lg:max-h-[509px]">
         <div
-          class="absolute text-white lg:max-w-[687px] lg:left-[186px] z-10 lg:max-h-[440px] flex flex-col justify-center items-start top-1/2 -translate-y-1/2 rounded-2xl bg-purple-900/80 backdrop-blur-md p-6"
+          class="absolute text-white lg:max-w-[687px] lg:left-[186px] md::mx-auto left-4 right-4 z-10 lg:max-h-[440px] flex flex-col justify-center items-start top-1/2 -translate-y-1/2 rounded-2xl bg-purple-900/80 backdrop-blur-md p-6"
         >
           <h2
             class="text-xl lg:text-2xl font-bold mb-6 relative after:absolute after:w-[80%] after:right-0 after:bottom-0 pb-5 after:bg-white after:rounded-2xl after:py-1"
@@ -44,7 +45,6 @@
             بأعلى معايير الجودة والتميز
           </p>
         </div>
-
         <img
           src="@/assets/images/Rectangle 17.webp"
           alt="rectangle"
@@ -52,7 +52,6 @@
           loading="lazy"
         />
       </div>
-
       <div class="flex flex-col gap-4 lg:max-h-[509px] overflow-hidden">
         <div
           class="basis-3/4 rounded-2xl overflow-hidden relative after:absolute after:w-full after:h-full after:bg-purple-900/70 after:left-0 after:top-0"

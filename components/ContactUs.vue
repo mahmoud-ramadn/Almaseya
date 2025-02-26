@@ -9,11 +9,10 @@
       </div>
 
       <div
-        class="w-full lg:max-w-[527px]  lg:max-h-[512px]    py-20 lg:py-40  lg:rounded-e-2xl rounded-2xl bg-[url('@/assets/images/contact.webp')] aspect-square bg-no-repeat bg-cover flex justify-center items-center"
+        class="w-full lg:max-w-[527px]  lg:max-h-[512px]    py-20 lg:py-40  lg:rounded-e-2xl rounded-2xl bg-[url('@/assets/images/contact.webp')] lg:aspect-auto bg-no-repeat bg-cover flex justify-center items-center"
       >
         <div class="text-center lg:text-left">
           <img src="@/assets/images/logo.webp" alt="logo" class="mx-auto" />
-
           <div
             class="mt-8 space-y-4 lg:space-y-0 lg:flex lg:items-center lg:justify-end lg:gap-6"
           >
@@ -23,8 +22,6 @@
               <SvgIcon name="location" class="size-6" />
               هيئة المدن الصناعية بخميس مشيط
             </p>
-
-            <!-- Phone -->
             <a href="tel:+966000000000"
               class="flex items-center justify-center lg:justify-start text-white hover:text-white text-sm gap-3"
             >

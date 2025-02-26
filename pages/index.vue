@@ -7,7 +7,7 @@
     <OurProducts />
     <OurServices/>
     <OurClients/>
-    <Gallary/>
+    <GallaryTwo/>
     <contact-us />
   </div>
 </template>
