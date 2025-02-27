@@ -92,7 +92,7 @@
     </div>
     <div
       @click="scrollToNextSection"
-      class="fixed cursor-pointer right-11 top-[84%] circle outline-t-2 z-50 outline-offset-4 flex items-center justify-center md:flex hidden outline-purple-900 outline-dashed bg-purple-900 rounded-full h-[77px] items-center justify-center"
+      class="fixed cursor-pointer right-11 top-[84%] circle outline-t-2 z-50 outline-offset-4 flex items-center justify-center md:flex hidden outline-purple-900 outline-dashed bg-purple-900 items-center justify-center"
     >
       <img src="@/assets/icons/svg/arrowdown.svg" alt="arrow" class="size-6" />
     </div>
@@ -112,10 +112,9 @@ function scrollToNextSection() {
 </script>
 
 <style scoped>
-.circle{
-  width: 77px;
+.circle {
+  width: 57px;
   height: 77px;
   border-radius: 50%;
 }
 </style>
-

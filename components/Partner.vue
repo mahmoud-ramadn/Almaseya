@@ -11,7 +11,7 @@
           class="flex items-center gap-x-3 lg:cursor-pointer cursor-grab"
         >
           <img
-            :src="item?.image"
+            :src="item.image"
             :alt="item.id"
             class="object-cover size-10 aspect-square"
             loading="lazy"
@@ -25,140 +25,69 @@
 
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import one from "@/assets/images/partners/1.webp";
-import two from "@/assets/images/partners/2.webp";
-import three from "@/assets/images/partners/3.webp";
-import four from "@/assets/images/partners/4.webp";
-import five from "@/assets/images/partners/5.webp";
-import six  from "@/assets/images/partners/6.webp";
-
-
 
 const items = [
   {
     id: 1,
     title: "ميرو",
-    image: one,
-    },
+    image: new URL("@/assets/images/partners/1.webp", import.meta.url).href,
+  },
   {
     id: 2,
     title: "مايكروسوفت",
-    image:two,
+    image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
   },
   {
     id: 3,
     title: "تيسلا",
-    image: three,
+    image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
   },
   {
     id: 4,
     title: "أوتو",
-    image: four,
+    image: new URL("@/assets/images/partners/4.webp", import.meta.url).href,
   },
   {
     id: 5,
     title: "ادوبي xd",
-    image: five,
+    image: new URL("@/assets/images/partners/5.webp", import.meta.url).href,
   },
   {
     id: 6,
     title: "ميرو",
-    image: six,
+    image: new URL("@/assets/images/partners/6.webp", import.meta.url).href,
   },
   {
     id: 7,
     title: "تيسلا",
-    image:three,
+    image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
   },
   {
     id: 8,
     title: "مايكروسوفت",
-    image: two,
+    image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
   },
   {
     id: 9,
     title: "مايكروسوفت",
-    image: two,
+    image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
   },
   {
     id: 10,
     title: "تيسلا",
-    image: three,
+    image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
   },
   {
     id: 11,
     title: "مايكروسوفت",
-    image:two
+    image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
   },
   {
     id: 12,
     title: "تيسلا",
-    image: three,
+    image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
   },
 ];
-
-// const items = [
-//   {
-//     id: 1,
-//     title: "ميرو",
-//     image: new URL("@/assets/images/partners/1.webp", import.meta.url).href,,
-//     },
-//   {
-//     id: 2,
-//     title: "مايكروسوفت",
-//     image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 3,
-//     title: "تيسلا",
-//     image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 4,
-//     title: "أوتو",
-//     image: new URL("@/assets/images/partners/4.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 5,
-//     title: "ادوبي xd",
-//     image: new URL("@/assets/images/partners/5.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 6,
-//     title: "ميرو",
-//     image: new URL("@/assets/images/partners/6.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 7,
-//     title: "تيسلا",
-//     image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 8,
-//     title: "مايكروسوفت",
-//     image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 9,
-//     title: "مايكروسوفت",
-//     image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 10,
-//     title: "تيسلا",
-//     image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 11,
-//     title: "مايكروسوفت",
-//     image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 12,
-//     title: "تيسلا",
-//     image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
-//   },
-// ];
 
 const swiperOptions = {
   autoPlay: true,

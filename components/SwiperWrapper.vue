@@ -30,19 +30,19 @@
             >
               <slot :item="item" />
             </SwiperSlide>
-                  <div v-if="arrows"
+            <div
+              v-if="arrows"
               class="py-10 flex arrow justify-center space-x-4 rtl:space-x-reverse"
             >
               <button
-                 @click="swiper?.slidePrev()"
-                class="border-2  border-purple-500 size-10  text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
+                @click="swiper?.slidePrev()"
+                class="border-2 border-purple-500 size-10 text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
               >
                 <svg-icon name="arrow-right" class="text-current" />
               </button>
 
               <button
-                @click="swiper?.slideNext();"
-               
+                @click="swiper?.slideNext()"
                 class="border-2 border-white bg-purple-500 size-10 text-white flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
               >
                 <svg-icon name="arrow-right" class="text-current rotate-180" />
@@ -154,9 +154,7 @@ const prev = () => {
 defineExpose({
   next,
   prev,
-})
-
-
+});
 </script>
 
 <style lang="postcss">
