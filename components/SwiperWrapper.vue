@@ -182,5 +182,4 @@ defineExpose({
   background-color: white;
   color: #9747ff;
 }
-
 </style>
