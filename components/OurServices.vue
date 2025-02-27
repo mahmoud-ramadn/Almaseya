@@ -13,9 +13,9 @@
       @slide-change="onSlideChange"
     >
       <template #default="">
-      <div class="flex lg:justify-between  mt-11  lg:flex-row flex-col gap-7   px-0 lg:items-center items-end  pb-6"
+      <div class="   container flex lg:justify-between   mt-11  lg:flex-row flex-col-reverse items-center      gap-8  lg:items-center   pb-6"
         >
-          <div class=" container    lg:pr-40   relative pb-20 space-y-2">
+          <div class=" relative lg:max-w-[941px] pb-20 space-y-2">
             <h3 class="text-2xl text-white font-bold md:text-xl">
               معدات المطبخ المركزي
             </h3>
@@ -54,9 +54,12 @@
               </button>
             </div>
           </div>
-          <div class=" float-right  lg:size-[675px] flex  items-center   px-4 ">
-            <img src="@/assets/images/circels.webp" alt="service" class="   object-cover  rotate-180  size-fit " loading="lazy">
-          </div>
+
+         
+            <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=2832&auto=format&fit=crop" alt="service" class="  size-[320px]    border-8  border-white  object-cover  rounded-full  " loading="lazy">
+ 
+
+
         </div>
       </template>
     </swiper-wrapper>
