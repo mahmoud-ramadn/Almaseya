@@ -7,8 +7,9 @@
         $emit('update:modelValue', ($event.target as HTMLTextAreaElement).value)
       "
       @blur="$emit('blur')"
-      :rows="rows"
-      class="mt-1 block w-full rounded-lg transition-colors duration-200 px-4 py-3"
+       rows="2"
+       
+      class="mt-1 block w-full rounded-lg resize-none  h-20 transition-colors duration-200 px-4 py-3"
       :class="[
         error
           ? 'border border-red-500 focus:border-red-500 focus:ring focus:ring-red-500/55 focus:ring-opacity-50'

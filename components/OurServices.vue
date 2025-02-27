@@ -1,23 +1,21 @@
 <template>
   <div
     id="our-services"
-    class="pt-6 bg-gradient-to-tr from-purple-500 to-purple-900"
+    class="pt-6 bg-gradient-to-tr from-purple-500    to-purple-900"
   >
     <UiTitle title="خدماتنا" class="mb-8 text-white before:bg-white" />
     <swiper-wrapper
       ref="swiperRef"
-      class="px-0 mx-0"
+      class="px-0 mx-0     "
       :items="[1, 2, 3, 4]"
-      :options="{ pagination: false }"
+      :options="{ swiperOptions }"
       dir="rtl"
       @slide-change="onSlideChange"
-      :arrows="false"
     >
       <template #default="">
-        <div
-          class="flex lg:justify-between lg:flex-row flex-col items-center overflow-hidden gap-10 h-[770px] pb-6"
+      <div class="flex lg:justify-between  mt-11  lg:flex-row flex-col gap-7   px-0 lg:items-center items-end  pb-6"
         >
-          <div class="max-w-[941px] relative lg:pr-32 pr-4 pb-16 space-y-2">
+          <div class=" container    lg:pr-40   relative pb-20 space-y-2">
             <h3 class="text-2xl text-white font-bold md:text-xl">
               معدات المطبخ المركزي
             </h3>
@@ -56,68 +54,8 @@
               </button>
             </div>
           </div>
-          <div class="   absolute -left-[224px] top-1/2 -translate-y-1/2    bg-blue-500  border-4 border-white size-[540px] rounded-full flex items-center justify-center"
-          >
-            <span
-              class="size-[150px] absolute border-4 border-white  rounded-full"
-              style="transform: rotate(0deg) translate(270px) rotate(0deg)"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="image"
-                class="w-full h-full object-cover rounded-full"
-              />
-            </span>
-            <span
-              class="size-[150px] absolute border-4 border-white  rounded-full"
-              style="transform: rotate(72deg) translate(270px) rotate(-72deg)"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="image"
-                class="w-full h-full object-cover rounded-full"
-              />
-            </span>
-            <span
-              class="size-[150px] absolute border-4 border-white  rounded-full"
-              style="transform: rotate(144deg) translate(270px) rotate(-144deg)"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="image"
-                class="w-full h-full object-cover rounded-full"
-              />
-            </span>
-            <span
-              class="size-[150px] absolute border-4 border-white rounded-full"
-              style="transform: rotate(216deg) translate(270px) rotate(-216deg)"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="image"
-                class="w-full h-full object-cover rounded-full"
-              />
-            </span>
-            <span
-              class="size-[150px] absolute border-4 border-white  rounded-full"
-              style="transform: rotate(288deg) translate(270px) rotate(-288deg)"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="image"
-                class="w-full h-full object-cover rounded-full"
-              />
-            </span>
-            <span
-              class="size-[320px] absolute border-4 border-white rounded-full overflow-hidden"
-              style="transform: rotate(0deg) translate(270px) rotate(0deg)"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="image"
-                class="w-full h-full object-cover rounded-full"
-              />
-            </span>
+          <div class=" float-right  lg:size-[675px]   px-4 ">
+            <img src="@/assets/images/circels.webp" alt="service" class="   object-cover  rotate-180  size-fit " loading="lazy">
           </div>
         </div>
       </template>
@@ -127,8 +65,8 @@
 
 <script setup lang="ts">
 const swiperRef = ref();
-const activeButton = ref<"prev" | "next" | null>(null);
-const activeIndex = ref(0); 
+
+
 
 const goToNext = () => {
   swiperRef.value?.next();
@@ -138,15 +76,5 @@ const goToPrev = () => {
   swiperRef.value?.prev();
 };
 
-const onSlideChange = (swiper: any) => {
-  activeIndex.value = swiper.activeIndex; 
 
-  if (swiper.isBeginning) {
-    activeButton.value = "prev";
-  } else if (swiper.isEnd) {
-    activeButton.value = "next";
-  } else {
-    activeButton.value = null;
-  }
-};
 </script>
