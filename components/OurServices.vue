@@ -1,7 +1,7 @@
 <template>
   <div
     id="our-services"
-    class="pt-6 bg-gradient-to-tr from-purple-500    to-purple-900"
+    class="pt-6 bg-gradient-to-tr from-purple-500    to-purple-900 lg:pb-28  pb-10"
   >
     <UiTitle title="خدماتنا" class="mb-8 text-white before:bg-white" />
     <swiper-wrapper
@@ -54,12 +54,7 @@
               </button>
             </div>
           </div>
-
-         
-            <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=2832&auto=format&fit=crop" alt="service" class="  size-[320px]    border-8  border-white  object-cover  rounded-full  " loading="lazy">
- 
-
-
+            <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=2832&auto=format&fit=crop" alt="service" class="  lg:size-[380px]  size-[320px]  lg:shrink-0   border-8  border-white  object-cover  rounded-full  " loading="lazy">
         </div>
       </template>
     </swiper-wrapper>
