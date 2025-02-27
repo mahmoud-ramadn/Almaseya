@@ -17,15 +17,15 @@
     >
       <div class="relative flex justify-end lg:max-h-[509px]">
         <div
-          class="absolute text-white lg:max-w-[687px] lg:left-[186px] md::mx-auto left-4 right-4 z-10 lg:max-h-[440px] flex flex-col justify-center items-start top-1/2 -translate-y-1/2 rounded-2xl bg-purple-900/80 backdrop-blur-md p-6"
+          class="absolute text-white lg:max-w-[687px] lg:left-[186px] md::mx-auto left-4    lg:p-7  p-4  gap-5  right-4 z-10  h-fit flex flex-col justify-center items-start top-1/2 -translate-y-1/2 rounded-2xl bg-purple-900/80 backdrop-blur-md "
         >
           <h2
-            class="text-xl lg:text-2xl font-bold mb-6 relative after:absolute after:w-[80%] after:right-0 after:bottom-0 pb-5 after:bg-white after:rounded-2xl after:py-1"
+            class="text-xl lg:text-2xl font-bold  relative after:absolute after:w-[80%] after:right-0 after:bottom-0 pb-5 after:bg-white after:rounded-2xl after:py-1"
           >
             من نحن
           </h2>
           <p
-            class="text-sm lg:text-lg sm:text-lg leading-relaxed font-medium mb-8"
+            class=" text-sm lg:text-lg sm:text-lg leading-relaxed font-medium  "
           >
             نحن مصنع متخصص لانواع الثلاجات من مبردات وثلاجات عرض السوبرماركت
             وغرف التبريد والتجميد واللحوم وثلاجات المواني واجهزة تنقية الهواء
@@ -34,7 +34,7 @@
             الاوربية والامريكية وخبرة بعض موظفينا تتجاوز الثلاثين سنة.
           </p>
           <h2
-            class="text-xl lg:text-2xl font-bold mb-6 relative after:absolute after:w-[80%] after:right-0 after:bottom-0 pb-5 after:bg-white after:rounded-2xl after:py-1"
+            class="text-xl lg:text-2xl font-bold  relative after:absolute after:w-[80%] after:right-0 after:bottom-0 lg:pb-5 pb-4 after:bg-white after:rounded-2xl after:py-1"
           >
             رؤيتنا
           </h2>
