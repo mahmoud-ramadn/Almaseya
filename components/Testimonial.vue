@@ -24,12 +24,12 @@ const swiperOptions = {
   loop: true,
   breakpoints: {
     2500: {
-      slidesPerView: 3.5,
+      slidesPerView: 3,
       spaceBetween: 16,
       centeredSlides: true,
     },
     1081: {
-      slidesPerView: 3,
+      slidesPerView: 1.8,
       spaceBetween: 16,
       centeredSlides: true,
     },
