@@ -54,7 +54,7 @@
               </button>
             </div>
           </div>
-          <div class=" float-right  lg:size-[675px]   px-4 ">
+          <div class=" float-right  lg:size-[675px] flex  items-center   px-4 ">
             <img src="@/assets/images/circels.webp" alt="service" class="   object-cover  rotate-180  size-fit " loading="lazy">
           </div>
         </div>
