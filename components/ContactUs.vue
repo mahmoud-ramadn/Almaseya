@@ -60,4 +60,3 @@ const socialLinks = [
 ];
 </script>
 
-<style scoped></style>

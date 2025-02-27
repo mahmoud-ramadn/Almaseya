@@ -1,7 +1,7 @@
 <template>
   <div>
     <hero />
-    <about-us />
+    <AboutUs/>
     <value-added />
     <Principles />
     <OurProducts />

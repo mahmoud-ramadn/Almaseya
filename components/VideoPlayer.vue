@@ -22,5 +22,3 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 </script>
-
-<style scoped></style>

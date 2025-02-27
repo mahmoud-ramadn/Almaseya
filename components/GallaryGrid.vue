@@ -38,6 +38,3 @@ const tabs = [
 const currentTabImages = computed(() => tabs[activeTab.value].images);
 </script>
 
-<style scoped>
-
-</style>

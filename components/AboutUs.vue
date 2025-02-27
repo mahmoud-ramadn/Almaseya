@@ -111,10 +111,3 @@ function scrollToNextSection() {
 }
 </script>
 
-<style lang="css" scoped>
-.circle {
-  border-radius: 50%;
-  width: 57px;
-  height: 77px;
-}
-</style>
