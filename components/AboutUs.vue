@@ -5,7 +5,7 @@
   >
     <a
       href="https://wa.me/966000000000"
-      class=" block fixed  cursor-pointer z-50 md:left-8 left-4 md:bottom-52   bottom-3 bg-green-500 rounded-full p-3 shadow-md"
+      class=" block fixed  cursor-pointer z-50 md:left-8 left-4 md:bottom-52   bottom-12 bg-green-500 rounded-full p-3 shadow-md"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -97,7 +97,7 @@
     </div>
     <div
       @click="scrollToNextSection"
-      class="  absolute cursor-pointer md:right-11  right-4 md:top-[84%] -bottom-[1.75rem]  circle outline-t-2 z-50 outline-offset-4 flex items-center justify-center md:flex  outline-purple-900 outline-dashed bg-purple-900 items-center justify-center"
+      class=" absolute cursor-pointer md:right-11  right-4 md:top-[84%] -bottom-[1.75rem]  circle outline-t-2 z-50 outline-offset-4 flex items-center justify-center md:flex  outline-purple-900 outline-dashed bg-purple-900 items-center justify-center"
     >
       <img src="@/assets/icons/svg/arrowdown.svg" alt="arrow" class="size-6" />
     </div>

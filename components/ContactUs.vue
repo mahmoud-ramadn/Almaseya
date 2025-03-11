@@ -7,7 +7,6 @@
       <div class="  w-full   rounded-s-2xl p-8 ">
         <form-contact-form />
       </div>
-
       <div
         class="w-full lg:max-w-[527px]  lg:max-h-[512px]    py-20 lg:py-40  lg:rounded-e-2xl rounded-2xl bg-[url('@/assets/images/contact.webp')] lg:aspect-auto bg-no-repeat bg-cover flex justify-center items-center"
       >
