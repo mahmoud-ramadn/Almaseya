@@ -10,9 +10,9 @@
               SwiperPagination,
               SwiperEffectFade,
             ]"
-            
             :slides-per-view="currentProps?.slidesPerView"
             :loop="currentProps?.loop"
+            :grid="gridOptions"
             :autoplay="currentProps?.autoPlay"
             :space-between="currentProps?.spaceBetween"
             :breakpoints="currentProps?.breakpoints"
@@ -23,22 +23,21 @@
             :options="options"
             @swiper="onSwiperLoad"
             :class="{ 'active-slide': index === swiper?.activeIndex }"
-            
-          > 
+          >
             <SwiperSlide
               v-for="(item, index) in items"
               :key="item?.id || index"
-              class="!h-auto "
+              class="!h-auto"
             >
               <slot :item="item" />
             </SwiperSlide>
             <div
               v-if="arrows"
-              class="py-10 flex arrow justify-center  space-x-4 rtl:space-x-reverse"
+              class="py-10 flex arrow justify-center space-x-4 rtl:space-x-reverse"
             >
               <button
                 @click="swiper?.slidePrev()"
-                class="border-2 border-purple-500  size-10 text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
+                class="border-2 border-purple-500 size-10 text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
               >
                 <svg-icon name="arrow-right" class="text-current" />
               </button>
@@ -93,6 +92,10 @@ type OptionsType = {
     }
   >;
   pagination?: boolean;
+  grid?: {
+    rows: number;
+    fill?: "row" | "column";
+  };
 };
 
 /**
@@ -102,6 +105,7 @@ interface Props {
   items: SlideItem[];
   options?: OptionsType;
   arrows?: boolean;
+  gridRows?: number; // New prop for grid rows
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -113,8 +117,10 @@ const props = withDefaults(defineProps<Props>(), {
     pagination: false,
     centeredSlides: false,
     breakpoints: {},
+    grid: undefined, // Default grid configuration
   }),
   arrows: false,
+  gridRows: 1, // Default number of grid rows
 });
 
 // Merge props value with defaults
@@ -122,6 +128,17 @@ const currentProps = computed(() => {
   return {
     ...props?.options,
   };
+});
+
+// Compute grid options
+const gridOptions = computed(() => {
+  if (props.gridRows > 1) {
+    return {
+      rows: props.gridRows,
+      fill: "row", // Default fill behavior
+    };
+  }
+  return undefined; // Disable grid if rows <= 1
 });
 
 // Map current props
@@ -162,7 +179,6 @@ defineExpose({
 <style lang="postcss">
 .currentSwiper {
   .swiper {
-   
     &-pagination {
       @apply relative flex mt-10 !bottom-0 items-center justify-center;
       &-bullet {

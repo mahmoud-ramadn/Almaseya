@@ -1,5 +1,5 @@
 <template>
-  <section id="our-products" class="pt-16">
+  <section id="our-products" class="pt-16  mb-20">
     <ui-title title="منتجاتنا" />
     <p class="font-medium text-center mt-6">
       تتسم جميع منتجاتنا بجودة التصنيع ضمن الشروط والمعايير العالمية وبأيدي

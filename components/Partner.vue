@@ -1,10 +1,6 @@
 <template>
   <Vue3Marquee
-    :direction="reverse"
     :duration="15"
-    :clone="true"
-    :loop="0"
-    :animateOnOverflowOnly="false"
     class="mt-12 mb-8 vue3-marquee w-full overflow-hidden"
   >
     <div class="flex gap-x-16 mx-3 w-full justify-between">

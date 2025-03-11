@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-6 mb-8 overflow-hidden"
+    class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 md:gap-6 gap-4 mb-8 overflow-hidden"
   >
     <div
       v-for="(image, index) in images"

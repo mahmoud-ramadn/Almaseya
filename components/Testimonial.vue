@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn(' mb-10  relative', $attrs.class)">
+  <div :class="cn(' md:mb-10  mb-20 relative', $attrs.class)">
     <div class="">
       <swiper-wrapper
         ref="swiperRef"
@@ -44,6 +44,22 @@ const swiperOptions = {
   },
   pagination: false,
 };
+
+
+
+const images = [
+  "https://images.unsplash.com/photo-1553530979-7ee52a2670c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1553530979-8aa8c7b4e706?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1547414876-84671013f45c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+];
+
+
+
 
 const swiperRef = ref();
 const activeButton = ref<"prev" | "next" | null>(null); // Track active button state

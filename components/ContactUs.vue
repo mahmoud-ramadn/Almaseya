@@ -1,5 +1,5 @@
 <template>
-  <section id="next-section" class="mb-32 px-4">
+  <section id="next-section" class="md:mb-32 mb-8  px-4">
     <ui-title title="تواصل معنا" />
     <div
       class="container mt-24   px-0 flex flex-col-reverse lg:flex-row lg:max-h-[512px]     rounded-2xl justify-between  bg-white shadow-2xl shadow-black/20 gap-y-7  items-center"

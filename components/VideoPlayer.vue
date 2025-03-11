@@ -6,9 +6,9 @@
       <img src="@/assets/icons/svg/vidoe-play.svg" alt="play" />
     </DialogTrigger>
     <DialogContent
-      class="lg:max-w-[700px]   w-4/5  rounded overflow-hidden    "
+      class="lg:max-w-[1000px]   w-[90%] md:h-fit  h-56 rounded overflow-hidden    "
     >
-      <video autoplay loop controls muted class=" w-full">
+      <video autoplay loop controls muted class=" w-full h-full">
         <source src="/videos/frame.mp4" type="video/mp4" />
       </video>
     </DialogContent>
