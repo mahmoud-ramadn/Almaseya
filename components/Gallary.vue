@@ -24,7 +24,7 @@
         :options="swiperOptions"
         :arrows="true"
       >
-        <template #default>
+        <template #default >
           <GallaryGrid />
         </template>
       </swiper-wrapper>
@@ -35,6 +35,33 @@
 <script setup lang="ts">
 const activeTab = ref(0);
 const swiperRef = ref(null);
+
+// const swiperOptions = {
+//   autoPlay: true,
+//   loop: true,
+//   breakpoints: {
+//     2500: {
+//       slidesPerView: 2,
+//       spaceBetween: 16,
+//       centeredSlides: true,
+//     },
+//     1081: {
+//       slidesPerView: 1.8,
+//       spaceBetween: 16,
+//       centeredSlides: true,
+//     },
+//     991: {
+//       slidesPerView: 2,
+//       spaceBetween: 16,
+//     },
+//     0: {
+//       slidesPerView: 1,
+//       spaceBetween: 15,
+//     },
+//   },
+//   pagination: false,
+// };
+
 const tabs = [
   { name: "منتجات مواد مجمدة" },
   { name: "منتجات الألبان" },

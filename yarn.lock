@@ -6581,10 +6581,10 @@ regjsparser@^0.10.0:
   dependencies:
     jsesc "~0.5.0"
 
-reka-ui@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/reka-ui/-/reka-ui-2.0.0.tgz#f13c3315137262ee7fc4f961b8605935ae57ef47"
-  integrity sha512-/1amDDvTnDIkSFbTZnUkiFWkxlc/UEe0pZsgvz3nDI15R9+yspQv/gIbM62Mo9LALK6A76NsgMNlXie04kv7PA==
+reka-ui@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/reka-ui/-/reka-ui-2.0.2.tgz#1a1991d24f9a346b70b268f8e4ae87ac3a511ff3"
+  integrity sha512-pC2UF6Z+kJF96aJvIErhkSO4DJYIeq9pgvh3pntNqcZb3zFGMzw8h2uny+GnLX2CKiQV54kZNYXxecYIiPMGyg==
   dependencies:
     "@floating-ui/dom" "^1.6.13"
     "@floating-ui/vue" "^1.1.6"
@@ -7860,6 +7860,11 @@ vue-router@^4.4.4, vue-router@^4.4.5, vue-router@latest:
   integrity sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==
   dependencies:
     "@vue/devtools-api" "^6.6.4"
+
+vue3-marquee@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/vue3-marquee/-/vue3-marquee-4.2.2.tgz#e5316591e5412931856d5a7e5aa2b34be4388673"
+  integrity sha512-FeFvGUVInKfFilXFcnl8sDRBJBZCZSNLlQDquJErB9db6W2xICRVqbRV/jtdzsEP0rftarLQhx9MeEAU0+TPuQ==
 
 vue@^3.5.13, vue@latest:
   version "3.5.13"

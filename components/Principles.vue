@@ -16,15 +16,15 @@ const principles = [
       class="text-center grid lg:grid-cols-4 grid-cols-1 gap-y-10 mt-8 mx-0 p-0 h-full"
     >
       <div
-        class="col-span-2 relative flex justify-center items-center lg:pr-[25%] pr-[10%] py-8 lg:h-[475px] md:h-[400px] h-[300px]"
+        class="col-span-2 relative flex justify-center items-center lg:pr-[25%] pr-[10%] py-8 lg:h-[475px] md:h-[400px] h-[200px]"
       >
         <div
-          class="bg-[url('@/assets/images/market.webp')] bg-no-repeat bg-cover absolute right-0 z-10 top-0 lg:w-[61%] md:w-[70%] xs-w-[80%] w-[45%] bg-center py-16 h-full"
+          class="bg-[url('@/assets/images/market.webp')] bg-no-repeat bg-cover absolute right-0 z-10 top-0 lg:w-[61%] md:w-[70%] xs-w-[80%] w-[45%] bg-center py-16  h-full "
         ></div>
         <img
           src="@/assets/images/principles.webp"
           alt="Principles Illustration"
-          class="border-r-[10px] border-white w-[90%] border-b-[9px] rounded object-cover z-10 h-[81%]"
+          class="border-r-[5px] border-white md:w-[90%]  w-4/5 border-b-[5px]  rounded-e-lg  overflow-hidden object-cover   aspect-video z-10  md:h-[95%] h-[168px]"
         />
       </div>
       <div

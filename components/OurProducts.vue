@@ -6,7 +6,7 @@
       وخبرات مميزة ،صديقة للبيئة وتوفر الطاقة
     </p>
     <div
-      class="mt-40 container mb-[120px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-36 px-4"
+      class="mt-40 container mb-[120px] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 md:gap-y-36 gap-y-6 px-4"
     >
       <product-card
         v-for="(product, index) in products"

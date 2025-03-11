@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: "2024-04-03",
-  devtools: {enabled: true},
+  devtools: { enabled: true },
   modules: [
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",
@@ -39,6 +39,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-swiper",
     "nuxt-rating",
+    undefined,
   ],
   tailwindcss: {
     exposeConfig: true,

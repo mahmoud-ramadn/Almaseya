@@ -1,20 +1,24 @@
 <template>
-  <section id="value-added"  class="lg:max-w-[1288px] w-full mx-auto   px-4  py-16 lg:py-32">
+  <section id="value-added"  class="lg:max-w-[1288px] w-full mx-auto   px-4  md:py-16 pt-12 pb-20 lg:py-32">
     <ui-title title="القيمة المضافة" />
     <div
-      class="flex gap-x-[135px] gap-y-12 justify-center  items-center md:flex-row flex-col flex-wrap mt-24"
+      class=" grid lg:grid-cols-4  md:grid-cols-3 grid-cols-2  grid-rows-2   md:gap-x-[135px] gap-x-6 gap-y-12 justify-center  items-center   mt-24"
     >
       <div
         v-for="(item, index) in valudeAddeData"
         :key="index"
-        class=" max-w-[213px]  text-center space-y-4 "
+        class="     self-center   text-center space-y-4 "
       >
-        <SvgIcon :name="item.icon" class="size-10 fill-purple-900  mx-auto" />
+        <SvgIcon :name="item.icon" class="size-10 fill-purple-900   mx-auto" />
         <p class=" font-medium text-base lg:text-lg">
           {{ item.title }}
         </p>
       </div>
     </div>
+
+
+
+    
   </section>
 </template>
 

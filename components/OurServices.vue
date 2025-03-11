@@ -15,11 +15,11 @@
       <template #default="">
       <div class="   container flex lg:justify-between   mt-11  lg:flex-row flex-col-reverse items-center      gap-8  lg:items-center   pb-6"
         >
-          <div class=" relative lg:max-w-[941px] pb-20 space-y-2">
-            <h3 class="text-2xl text-white font-bold md:text-xl">
+          <div class=" relative lg:max-w-[941px]   lg:text-start text-center pb-20 space-y-2">
+            <h3 class="md:text-2xl text-white font-bold  text-lg ">
               معدات المطبخ المركزي
             </h3>
-            <p class="mt-4 lg:text-lg text-sm leading-loose text-white">
+            <p class=" lg:text-lg font-medium leading-loose mt-4 text-white">
               نوفر لك أحدث معدات المطابخ المركزية المصممة لتلبية احتياجات
               المطاعم، الفنادق، شركات التموين، والمطابخ السحابية. نقدم حلولًا
               متكاملة تشمل تجهيزات الطهي، التبريد، التخزين، وأدوات التحضير، مع
@@ -29,7 +29,7 @@
               بأحدث التقنيات لتحقيق أعلى مستويات الإنتاجية والجودة!
             </p>
             <div
-              class="py-10 flex justify-center arrows -bottom-10 absolute z-10 items-start space-x-4 rtl:space-x-reverse"
+              class="py-10 flex justify-center arrows -bottom-10   md:w-fit w-full absolute z-10 items-start space-x-4 rtl:space-x-reverse"
             >
               <button
                 @click="goToPrev"
@@ -54,7 +54,7 @@
               </button>
             </div>
           </div>
-            <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=2832&auto=format&fit=crop" alt="service" class="  lg:size-[380px]  size-[320px]  lg:shrink-0   border-8  border-white  object-cover  rounded-full  " loading="lazy">
+            <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=2832&auto=format&fit=crop" alt="service" class="  lg:size-[380px]  size-[210px]  lg:shrink-0   md:border-8 border-4  border-white  object-cover  rounded-full  " loading="lazy">
         </div>
       </template>
     </swiper-wrapper>

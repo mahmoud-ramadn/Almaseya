@@ -1,178 +1,81 @@
 <template>
-  <div :class="cn('partners pt-12 pb-8', $attrs.class)">
-    <swiper-wrapper
-      class="mx-auto pr-4"
-      :items="items"
-      :options="swiperOptions"
-    >
-      <template #default="{ item }">
-        <div
-          :key="item.id"
-          class="flex items-center gap-x-3 lg:cursor-pointer cursor-grab"
-        >
-          <img
-            :src="item.image"
-            :alt="item.id"
-            class="object-cover size-10 aspect-square   rounded-lg"
-            loading="lazy"
-          />
-          <p>{{ item.title }}</p>
-        </div>
-      </template>
-    </swiper-wrapper>
-  </div>
+  <Vue3Marquee
+    :direction="reverse"
+    :duration="15"
+    :clone="true"
+    :loop="0"
+    :animateOnOverflowOnly="false"
+    class="mt-12 mb-8 vue3-marquee w-full overflow-hidden"
+  >
+    <div class="flex gap-x-16 mx-3 w-full justify-between">
+      <div
+        v-for="(item, index) in items"
+        :key="index"
+        class="cursor-grab lg:cursor-pointer flex items-center gap-2"
+      >
+        <img
+          :src="item.image"
+          :alt="item.title"
+          class="object-cover size-12 aspect-square rounded-lg shadow-md"
+          loading="lazy"
+        />
+        <p class="text-base font-medium">{{ item.title }}</p>
+      </div>
+    </div>
+  </Vue3Marquee>
 </template>
 
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
+import { Vue3Marquee } from "vue3-marquee";
+import one from "../assets/images/Partners/1.webp";
 
 const items = [
   {
     id: 1,
     title: "تسلا",
-    image:"https://static.vecteezy.com/system/resources/previews/020/336/044/non_2x/tesla-logo-tesla-icon-transparent-png-free-vector.jpg",
+    image: one,
   },
   {
     id: 2,
     title: "مايكروسوفت",
-    image:"https://w7.pngwing.com/pngs/719/781/png-transparent-windows-logo-microsoft-windows-scalable-graphics-logo-computer-file-microsoft-logo-icon-angle-text-rectangle.png",
+    image:
+      "https://w7.pngwing.com/pngs/719/781/png-transparent-windows-logo-microsoft-windows-scalable-graphics-logo-computer-file-microsoft-logo-icon-angle-text-rectangle.png",
   },
-
   {
     id: 3,
-    title: "ادوبي xd",
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUZK5gi1clbPagXVx8PLkTK8qhlBCjve9oRw&s",
+    title: "ادوبي XD",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUZK5gi1clbPagXVx8PLkTK8qhlBCjve9oRw&s",
   },
   {
     id: 4,
-   title: "مايكروسوفت",
-    image:"https://w7.pngwing.com/pngs/719/781/png-transparent-windows-logo-microsoft-windows-scalable-graphics-logo-computer-file-microsoft-logo-icon-angle-text-rectangle.png",
-  },
-  {
-    id: 4,
-    title: "ادوبي xd",
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUZK5gi1clbPagXVx8PLkTK8qhlBCjve9oRw&s",
+    title: "جوجل",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
   },
   {
     id: 5,
-    title: "تسلا",
-    image:"https://static.vecteezy.com/system/resources/previews/020/336/044/non_2x/tesla-logo-tesla-icon-transparent-png-free-vector.jpg",
+    title: "فيسبوك",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
   },
   {
     id: 6,
-   title: "مايكروسوفت",
-    image:"https://w7.pngwing.com/pngs/719/781/png-transparent-windows-logo-microsoft-windows-scalable-graphics-logo-computer-file-microsoft-logo-icon-angle-text-rectangle.png",
+    title: "أبل",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
   },
   {
     id: 7,
-    title: "ادوبي xd",
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUZK5gi1clbPagXVx8PLkTK8qhlBCjve9oRw&s",
+    title: "أمازون",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
   },
   {
     id: 8,
-   title: "مايكروسوفت",
-    image:"https://w7.pngwing.com/pngs/719/781/png-transparent-windows-logo-microsoft-windows-scalable-graphics-logo-computer-file-microsoft-logo-icon-angle-text-rectangle.png",
+    title: "لينكدإن",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
   },
-  {
-    id: 9,
-    title: "ادوبي xd",
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUZK5gi1clbPagXVx8PLkTK8qhlBCjve9oRw&s",
-  },
-  {
-    id: 10,
-    title: "ادوبي xd",
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUZK5gi1clbPagXVx8PLkTK8qhlBCjve9oRw&s",
-  },
-]
-
-// const items = [
-//   {
-//     id: 1,
-//     title: "ميرو",
-//     image: new URL("@/assets/images/partners/1.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 2,
-//     title: "مايكروسوفت",
-//     image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 3,
-//     title: "تيسلا",
-//     image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 4,
-//     title: "أوتو",
-//     image: new URL("@/assets/images/partners/4.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 5,
-//     title: "ادوبي xd",
-//     image: new URL("@/assets/images/partners/5.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 6,
-//     title: "ميرو",
-//     image: new URL("@/assets/images/partners/6.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 7,
-//     title: "تيسلا",
-//     image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 8,
-//     title: "مايكروسوفت",
-//     image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 9,
-//     title: "مايكروسوفت",
-//     image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 10,
-//     title: "تيسلا",
-//     image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 11,
-//     title: "مايكروسوفت",
-//     image: new URL("@/assets/images/partners/2.webp", import.meta.url).href,
-//   },
-//   {
-//     id: 12,
-//     title: "تيسلا",
-//     image: new URL("@/assets/images/partners/3.webp", import.meta.url).href,
-//   },
-// ];
-
-const swiperOptions = {
-  autoPlay: true,
-  loop: true,
-  breakpoints: {
-    1800: {
-      slidesPerView: 10,
-      spaceBetween: 150,
-    },
-
-    1081: {
-      slidesPerView: 8,
-      spaceBetween: 64,
-    },
-    991: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-    767: {
-      slidesPerView: 2.5,
-      spaceBetween: 15,
-    },
-    0: {
-      slidesPerView: 2.2,
-      spaceBetween: 15,
-    },
-  },
-};
+];
 </script>

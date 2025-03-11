@@ -2,7 +2,7 @@
   <section id="next-section" class="mb-32">
     <ui-title title="تواصل معنا" />
     <div
-      class="container mt-24  p-0 flex flex-col-reverse lg:flex-row lg:max-h-[512px]     rounded-2xl justify-between  bg-white shadow-2xl shadow-black/20 gap-y-7  items-center"
+      class="container mt-24   px-4 flex flex-col-reverse lg:flex-row lg:max-h-[512px]     rounded-2xl justify-between  bg-white shadow-2xl shadow-black/20 gap-y-7  items-center"
     >
       <div class="  w-full   rounded-s-2xl p-8 ">
         <form-contact-form />

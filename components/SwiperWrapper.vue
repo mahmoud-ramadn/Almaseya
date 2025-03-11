@@ -10,6 +10,7 @@
               SwiperPagination,
               SwiperEffectFade,
             ]"
+            
             :slides-per-view="currentProps?.slidesPerView"
             :loop="currentProps?.loop"
             :autoplay="currentProps?.autoPlay"
@@ -22,21 +23,22 @@
             :options="options"
             @swiper="onSwiperLoad"
             :class="{ 'active-slide': index === swiper?.activeIndex }"
-          >
+            
+          > 
             <SwiperSlide
               v-for="(item, index) in items"
               :key="item?.id || index"
-              class="!h-auto"
+              class="!h-auto "
             >
               <slot :item="item" />
             </SwiperSlide>
             <div
               v-if="arrows"
-              class="py-10 flex arrow justify-center space-x-4 rtl:space-x-reverse"
+              class="py-10 flex arrow justify-center  space-x-4 rtl:space-x-reverse"
             >
               <button
                 @click="swiper?.slidePrev()"
-                class="border-2 border-purple-500 size-10 text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
+                class="border-2 border-purple-500  size-10 text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
               >
                 <svg-icon name="arrow-right" class="text-current" />
               </button>
@@ -160,6 +162,7 @@ defineExpose({
 <style lang="postcss">
 .currentSwiper {
   .swiper {
+   
     &-pagination {
       @apply relative flex mt-10 !bottom-0 items-center justify-center;
       &-bullet {
