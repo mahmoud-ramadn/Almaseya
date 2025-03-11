@@ -6,7 +6,7 @@
   
     <UiTitle title="خدماتنا" class="mb-8 text-white before:bg-white" />
  <div
-      class=" flex  gap-x-5  lg:bottom-[7rem]  lg:left-[60%] left-1/2 -translate-x-1/2  md:bottom-[5rem]  bottom-[4rem]  absolute z-50  "
+      class=" flex  gap-x-5  lg:bottom-[7rem]   left-1/2 -translate-x-1/2  md:bottom-[5rem]  bottom-[4rem]  absolute z-50  "
     >
       <button
         @click="goToPrev"
