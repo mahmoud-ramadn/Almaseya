@@ -1,6 +1,8 @@
 <template>
   <Vue3Marquee
-    :duration="15"
+    :duration="5"
+    :clone=" true"
+    :loop="0"
     class="mt-12 mb-8 vue3-marquee w-full overflow-hidden"
   >
     <div class="flex gap-x-16 mx-3 w-full justify-between">
@@ -19,6 +21,7 @@
       </div>
     </div>
   </Vue3Marquee>
+
 </template>
 
 <script setup lang="ts">
@@ -75,3 +78,7 @@ const items = [
   },
 ];
 </script>
+
+
+
+
