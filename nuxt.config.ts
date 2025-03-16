@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBase: process.env.NUXT_API_BASE_URL,
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL,
     },
   },
   compatibilityDate: "2024-04-03",

@@ -7,3 +7,6 @@ body {
 a {
   @apply transition-all duration-200 hover:text-blue-600;
 }
+
+
+

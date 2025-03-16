@@ -9,16 +9,12 @@
       class="lg:max-w-[1000px]   w-[90%] md:h-fit  h-56 rounded overflow-hidden    "
     >
       <video autoplay loop controls muted class=" w-full h-full">
-        <source src="/videos/frame.mp4" type="video/mp4" />
+        <source :src="homeDataSection?.about?.video " type="video/mp4" />
       </video>
     </DialogContent>
   </Dialog>
 </template>
 
 <script setup lang="ts">
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+const { homeDataSection } = useHomeState();
 </script>

@@ -4,33 +4,49 @@
       :id="id"
       :type="type"
       :value="modelValue"
-      @input="
-        $emit('update:modelValue', ($event.target as HTMLInputElement).value)
-      "
+      @input="handleInput"
       @blur="$emit('blur')"
       class="mt-1 block w-full rounded-lg transition-colors duration-200 h-14 px-4"
-      :class="[
-        error
-          ? 'border border-red-500 focus:border-red-500 focus:ring focus:ring-red-500/15 focus:ring-opacity-50'
-          : 'border  border-gray-100 focus:border-blue-500 focus:ring focus:ring-purple-500  focus:ring-opacity-50',
-      ]"
-      :placeholder="placholder"
+      :class="inputClasses"
+      :placeholder="placeholder"
     />
-    <p v-if="error" class="mt-1 text-sm text-red-500">{{ error }}</p>
+    <p v-if="showError" class="mt-1 text-sm text-red-500">
+      {{ error }}
+    </p>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
+interface Props {
   id: string;
-  placholder: string;
+  placeholder: string;
   modelValue: string;
   type?: string;
   error?: string;
-}>();
+  isDirty?: boolean;
+  isBlurred?: boolean;
+}
 
-defineEmits<{
+const props = withDefaults(defineProps<Props>(), {
+  type: "text",
+});
+
+const emit = defineEmits<{
   "update:modelValue": [value: string];
   blur: [];
+  dirty: [isDirty: boolean];
 }>();
+
+const handleInput = (event: Event) => {
+  const value = (event.target as HTMLInputElement).value;
+  emit("update:modelValue", value);
+  emit("dirty", true);
+};
+
+const showError = computed(() => props.error && (props.isDirty || props.isBlurred));
+
+const inputClasses = computed(() => ({
+  "border border-red-500 focus:border-red-500 focus:ring focus:ring-red-500/15 focus:ring-opacity-50": showError.value,
+  "border border-gray-100 focus:border-blue-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50": !showError.value,
+}));
 </script>

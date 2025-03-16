@@ -12,7 +12,6 @@
             ]"
             :slides-per-view="currentProps?.slidesPerView"
             :loop="currentProps?.loop"
-            :grid="gridOptions"
             :autoplay="currentProps?.autoPlay"
             :space-between="currentProps?.spaceBetween"
             :breakpoints="currentProps?.breakpoints"
@@ -22,12 +21,13 @@
             :effect="currentProps?.effect"
             :options="options"
             @swiper="onSwiperLoad"
-            :class="{ 'active-slide': index === swiper?.activeIndex }"
+            @slide-change="onSlideChange"
           >
             <SwiperSlide
               v-for="(item, index) in items"
               :key="item?.id || index"
               class="!h-auto"
+              :class="{ 'active-slide': index === swiper?.activeIndex }"
             >
               <slot :item="item" />
             </SwiperSlide>
@@ -37,14 +37,14 @@
             >
               <button
                 @click="swiper?.slidePrev()"
-                class="border-2 border-purple-500 size-10 text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
+                class="border-2 border-purple-500 hover:bg-purple-500 size-10 hover:text-white text-purple-500 flex justify-center items-center rounded-full  transition-colors"
               >
                 <svg-icon name="arrow-right" class="text-current" />
               </button>
 
               <button
                 @click="swiper?.slideNext()"
-                class="border-2 border-white bg-purple-500 size-10 text-white flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
+                class="border-2  border-purple-500 hover:bg-purple-500 size-10  hover:text-white text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed transition-colors"
               >
                 <svg-icon name="arrow-right" class="text-current rotate-180" />
               </button>
@@ -60,8 +60,9 @@
 </template>
 
 <script lang="ts" setup>
+import { ref, computed } from "vue";
+
 /**
- * Type definition for individual slide item
  */
 type SlideItem = {
   id?: string | number;
@@ -98,9 +99,6 @@ type OptionsType = {
   };
 };
 
-/**
- * Props interface for the SwiperWrapper component
- */
 interface Props {
   items: SlideItem[];
   options?: OptionsType;
@@ -131,15 +129,6 @@ const currentProps = computed(() => {
 });
 
 // Compute grid options
-const gridOptions = computed(() => {
-  if (props.gridRows > 1) {
-    return {
-      rows: props.gridRows,
-      fill: "row", // Default fill behavior
-    };
-  }
-  return undefined; // Disable grid if rows <= 1
-});
 
 // Map current props
 const mapCurrentProps = computed(() => {
@@ -156,10 +145,17 @@ const swiper = ref();
 type SwiperInstance = {
   slideNext?: () => void;
   slidePrev?: () => void;
+  activeIndex?: number;
+  realIndex?: number; // الفهرس الحقيقي في وضع الحلقة
 };
 
 const onSwiperLoad = (value: SwiperInstance) => {
   swiper.value = value;
+};
+
+const onSlideChange = (swiperInstance: SwiperInstance) => {
+  swiper.value = swiperInstance;
+  emit("slide-change", swiperInstance.realIndex); // استخدام الفهرس الحقيقي في وضع الحلقة
 };
 
 const next = () => {
@@ -170,10 +166,19 @@ const prev = () => {
   swiper.value?.slidePrev();
 };
 
+const slideTo = (index: number) => {
+  if (swiper.value) {
+    swiper.value.slideTo(index);
+  }
+};
+
 defineExpose({
   next,
   prev,
+  slideTo,
 });
+
+const emit = defineEmits(["slide-change"]);
 </script>
 
 <style lang="postcss">

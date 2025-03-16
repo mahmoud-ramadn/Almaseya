@@ -25,16 +25,16 @@
     <SheetTrigger as-child class=" md:hidden absolute right-4">
         <SvgIcon name="bars" class=" size-5 fill-white  " />
     </SheetTrigger>
-    <SheetContent  class=" bg-gradient-purple border-l  flex justify-center items-start    border-purple-500 ">
+    <SheetContent  class=" bg-gradient-purple border-l    pr-8  border-purple-500 ">
       <SheetClose  class="  focus:outline-none">
         <div class=" w-full">
           <ul
-         class="   text-center w-full   mt-8 space-y-6"
+         class="w-ful  mt-16 space-y-6"
        >
              <li
                v-for="(item, index) in NavLinks"
                @click="scrollToNextSection(item.section)"
-               class="  font-semibold cursor-pointer w-full  text-lg  text-white"
+               class="  font-semibold cursor-pointer w-full   text-start text-lg  text-white"
              >   
                  {{ item.title }}
              </li>

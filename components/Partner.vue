@@ -1,8 +1,9 @@
 <template>
   <Vue3Marquee
-    :duration="5"
+    :duration="15"
     :clone=" true"
     :loop="0"
+    :pauseOnHover="true"
     class="mt-12 mb-8 vue3-marquee w-full overflow-hidden"
   >
     <div class="flex gap-x-16 mx-3 w-full justify-between">
@@ -14,7 +15,7 @@
         <img
           :src="item.image"
           :alt="item.title"
-          class="object-cover size-12 aspect-square rounded-lg shadow-md"
+          class=" object-contain size-12 aspect-square rounded-lg shadow-md"
           loading="lazy"
         />
         <p class="text-base font-medium">{{ item.title }}</p>

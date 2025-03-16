@@ -9,7 +9,7 @@
         :arrows="true"
       >
         <template #default="">
-            <client-card />
+          <client-card />
         </template>
       </swiper-wrapper>
     </div>
@@ -20,11 +20,14 @@
 import { cn } from "@/lib/utils";
 
 const swiperOptions = {
-  autoPlay: true,
+  autoPlay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   loop: true,
   breakpoints: {
     2500: {
-      slidesPerView: 1.8,
+      slidesPerView: 3,
       spaceBetween: 16,
       centeredSlides: true,
     },
@@ -45,8 +48,6 @@ const swiperOptions = {
   pagination: false,
 };
 
-
-
 const images = [
   "https://images.unsplash.com/photo-1553530979-7ee52a2670c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1553530979-8aa8c7b4e706?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -57,9 +58,6 @@ const images = [
   "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
 ];
-
-
-
 
 const swiperRef = ref();
 const activeButton = ref<"prev" | "next" | null>(null); // Track active button state
