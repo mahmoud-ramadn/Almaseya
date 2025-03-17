@@ -1,10 +1,9 @@
 <template>
-  <div :class="cn(' md:mb-10  mb-20 relative', $attrs.class)">
+  <div :class="cn(' md:mb-10  mb-20 relative', $attrs.class as string)">
     <div class="">
       <swiper-wrapper
-        ref="swiperRef"
         class="feedbackSlider lg:px-0 px-4"
-        :items="[1, 2, 3, 4, 5]"
+        :items="slideItems"
         :options="swiperOptions"
         :arrows="true"
       >
@@ -47,36 +46,11 @@ const swiperOptions = {
   },
   pagination: false,
 };
-
-const images = [
-  "https://images.unsplash.com/photo-1553530979-7ee52a2670c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1553530979-8aa8c7b4e706?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1547414876-84671013f45c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+const slideItems = [
+  { id: 1, content: 'Slide 1' },
+  { id: 2, content: 'Slide 2' },
+  { id: 3, content: 'Slide 3' },
+  { id: 4, content: 'Slide 4' },
+  { id: 5, content: 'Slide 5' },
 ];
-
-const swiperRef = ref();
-const activeButton = ref<"prev" | "next" | null>(null); // Track active button state
-
-const goToNext = () => {
-  swiperRef.value?.next();
-};
-
-const goToPrev = () => {
-  swiperRef.value?.prev();
-};
-
-const onSlideChange = (swiper: any) => {
-  if (swiper.isBeginning) {
-    activeButton.value = "prev"; // Highlight previous button when at the start
-  } else if (swiper.isEnd) {
-    activeButton.value = "next"; // Highlight next button when at the end
-  } else {
-    activeButton.value = null; // Reset highlight in between
-  }
-};
 </script>

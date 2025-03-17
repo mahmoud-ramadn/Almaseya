@@ -13,6 +13,7 @@ export const useContactUs = () => {
     }
     catch (error) {
       err.value = error;
+      // eslint-disable-next-line no-console
       console.log(error);
     }
     finally {

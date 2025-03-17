@@ -36,15 +36,15 @@
               class="py-10 flex arrow justify-center space-x-4 rtl:space-x-reverse"
             >
               <button
-                @click="swiper?.slidePrev()"
                 class="border-2 border-purple-500 hover:bg-purple-500 size-10 hover:text-white text-purple-500 flex justify-center items-center rounded-full  transition-colors"
+                @click="swiper?.slidePrev()"
               >
                 <svg-icon name="arrow-right" class="text-current" />
               </button>
 
               <button
-                @click="swiper?.slideNext()"
                 class="border-2  border-purple-500 hover:bg-purple-500 size-10  hover:text-white text-purple-500 flex justify-center items-center rounded-full disabled:cursor-not-allowed transition-colors"
+                @click="swiper?.slideNext()"
               >
                 <svg-icon name="arrow-right" class="text-current rotate-180" />
               </button>
@@ -60,18 +60,11 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from "vue";
-
-/**
- */
 type SlideItem = {
   id?: string | number;
   [key: string]: any;
 };
 
-/**
- * Type definition for Swiper options
- */
 type OptionsType = {
   slidesPerView?: number;
   loop?: boolean;
@@ -103,7 +96,7 @@ interface Props {
   items: SlideItem[];
   options?: OptionsType;
   arrows?: boolean;
-  gridRows?: number; // New prop for grid rows
+  gridRows?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -115,22 +108,20 @@ const props = withDefaults(defineProps<Props>(), {
     pagination: false,
     centeredSlides: false,
     breakpoints: {},
-    grid: undefined, // Default grid configuration
+    grid: undefined,
   }),
   arrows: false,
-  gridRows: 1, // Default number of grid rows
+  gridRows: 1,
 });
 
-// Merge props value with defaults
+const emit = defineEmits(["slide-change"]);
+
 const currentProps = computed(() => {
   return {
     ...props?.options,
   };
 });
 
-// Compute grid options
-
-// Map current props
 const mapCurrentProps = computed(() => {
   return {
     ...(currentProps.value?.pagination && {
@@ -139,14 +130,13 @@ const mapCurrentProps = computed(() => {
   };
 });
 
-// Refs
 const swiper = ref();
 
 type SwiperInstance = {
   slideNext?: () => void;
   slidePrev?: () => void;
   activeIndex?: number;
-  realIndex?: number; // الفهرس الحقيقي في وضع الحلقة
+  realIndex?: number;
 };
 
 const onSwiperLoad = (value: SwiperInstance) => {
@@ -155,6 +145,7 @@ const onSwiperLoad = (value: SwiperInstance) => {
 
 const onSlideChange = (swiperInstance: SwiperInstance) => {
   swiper.value = swiperInstance;
+  // eslint-disable-next-line vue/custom-event-name-casing
   emit("slide-change", swiperInstance.realIndex); // استخدام الفهرس الحقيقي في وضع الحلقة
 };
 
@@ -177,8 +168,6 @@ defineExpose({
   prev,
   slideTo,
 });
-
-const emit = defineEmits(["slide-change"]);
 </script>
 
 <style lang="postcss">

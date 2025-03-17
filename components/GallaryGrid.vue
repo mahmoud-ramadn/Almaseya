@@ -9,7 +9,7 @@
     >
       <img
         :src="image"
-        :alt="'Gallery image ' + (index + 1)"
+        :alt="`Gallery image ${(index + 1)}`"
         class="w-full h-full object-cover aspect-square"
         loading="lazy"
       />
@@ -18,10 +18,5 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  images: {
-    type: Array as () => string[],
-    required: true,
-  },
-});
+defineProps({images: {type: Array as () => string[], required: true}});
 </script>

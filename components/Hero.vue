@@ -1,19 +1,18 @@
 <template>
   <section
-    class="relative bg-[url('@/assets/images/hero.webp')] w-full bg-no-repeat bg-cover lg:pb-48   pb-40 pt-6 after:absolute after:bg-gradient-purple after:left-0 after:top-0 after:w-full after:h-full after:content-[''] after:z-[1]"
+    class="relative bg-[url('@/assets/images/hero.webp')] w-full bg-no-repeat bg-cover lg:pb-48 pb-40 pt-6 after:absolute after:bg-gradient-purple after:left-0 after:top-0 after:w-full after:h-full after:content-[''] after:z-[1]"
   >
-  <NavigationBar/>
-
-  <div class="relative z-10 text-center mt-32 px-4">
+    <NavigationBar />
+    <div class="relative z-10 text-center mt-32 px-4">
       <h1 class="font-bold lg:text-4xl text-3xl text-white">
         ريادة في صناعة التبريد والتكييف بخبرة عالمية
       </h1>
-      <p class="md:font-bold md:text-2xl   font-medium  text-white lg:py-10 py-4">
+      <p class="md:font-bold md:text-2xl font-medium text-white lg:py-10 py-4">
         جودة عالمية بخبرة 30 عامًا في تصنيع الثلاجات، غرف التبريد، والتكييف
       </p>
       <button
-        class=" text-purple-900  cursor-pointer text-base my-10 rounded-lg bg-white font-semibold py-4 px-8"
-            @click="scrollToNextSection"
+        class="text-purple-900 cursor-pointer text-base my-10 rounded-lg bg-white font-semibold py-4 px-8"
+        @click="scrollToNextSection"
       >
         تواصل معنا الان
       </button>

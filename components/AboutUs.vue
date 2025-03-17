@@ -4,7 +4,7 @@
     class="bg-[url('@/assets/images/background.webp')] w-full pt-16 pb-12 px-4 relative bg-no-repeat bg-cover"
   >
     <a
-      href="https://wa.me/966000000000"
+      href="https://wa.me/+966505743306"
       class="block fixed cursor-pointer z-50 md:left-8 left-4 md:bottom-52 bottom-12 bg-green-500 rounded-full p-3 shadow-md"
       target="_blank"
       rel="noopener noreferrer"
@@ -22,10 +22,14 @@
           <h2
             class="text-xl lg:text-2xl font-bold relative after:absolute after:w-[80%] after:right-0 after:bottom-0 pb-5 after:bg-white after:rounded-2xl after:py-1"
           >
-            {{ homeDataSection.about.title.ar }}
+            من نحن
           </h2>
           <p class="text-sm lg:text-lg leading-relaxed font-medium">
-            {{ homeDataSection.about.description.ar }}
+            نحن مصنع مختص بأنواع الثلاجات من فريزرات وثلاجات عرض للسوبرماركت
+            وغرف التبريد والتجميد واللحوم وثلاجات الموتى وأجهزة تنقية الهواء
+            وأعمال الدكت والتكييف. يقع المصنع في هيئة المدن الصناعية بخميس مشيط
+            على مساحة 11000 م أحدى عشر ألف متر . وجودتنا تنافس المنتجات الأوربية
+            والأمريكية وخبرة بعض موظفينا تتجاوز الثلاثين سنة.
           </p>
           <h2
             class="text-xl lg:text-2xl font-bold relative after:absolute after:w-[80%] after:right-0 after:bottom-0 lg:pb-5 pb-4 after:bg-white after:rounded-2xl after:py-1"
@@ -76,8 +80,6 @@
 </template>
 
 <script lang="ts" setup>
-const { homeDataSection } = useHomeState();
-
 function scrollToNextSection() {
   const nextSection = document.getElementById("next-section");
   if (nextSection) {

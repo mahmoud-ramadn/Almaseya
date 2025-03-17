@@ -17,9 +17,9 @@ export const useProduct = () => {
   const { setProductData } = useHomeState();
 
   return useAsyncData("productsData", async () => {
-    const { data } = await useAPI("products");
+    const { data } = await useAPI<{ data: TProduct[] }>("products");
     if (data.value) {
-      setProductData(data.value.data); 
+      setProductData(data.value?.data || [])
     }
     return data.value?.data;
   });
@@ -29,7 +29,7 @@ export const useHome = () => {
   const { setHomeDataSection } = useHomeState();
 
   return useAsyncData("homeData", async () => {
-    const { data } = await useAPI("home");
+    const { data } = await useAPI<{ data: any }>("home");
     if (data.value) {
       setHomeDataSection(data.value?.data);
     }

@@ -22,19 +22,19 @@
               هيئة المدن الصناعية بخميس مشيط
             </p>
             <a
-              href="tel:+966000000000"
+              href="tel:+966550505238"
               class="flex items-center justify-center lg:justify-start text-white hover:text-white text-sm gap-3"
             >
               <SvgIcon name="call" class="size-6 text-white" />
-              +966000000000
+              +966550505238
             </a>
           </div>
           <a
-            href="mailto:almaseya@example.com"
+            href="mailto:info@smq.com.sa"
             class="flex items-center justify-center lg:justify-start text-white hover:text-white text-sm mt-4 gap-x-4"
           >
             <img src="@/assets/icons/svg/Sms.svg" alt="sms" class="size-6" />
-            almaseya@example.com
+            info@smq.com.sa
           </a>
           <div class="flex items-center justify-center gap-x-4 mt-6">
             <nuxt-link

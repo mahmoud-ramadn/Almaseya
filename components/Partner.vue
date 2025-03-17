@@ -3,7 +3,7 @@
     :duration="15"
     :clone=" true"
     :loop="0"
-    :pauseOnHover="true"
+    :pause-on-hover="true"
     class="mt-12 mb-8 vue3-marquee w-full overflow-hidden"
   >
     <div class="flex gap-x-16 mx-3 w-full justify-between">
@@ -22,11 +22,9 @@
       </div>
     </div>
   </Vue3Marquee>
-
 </template>
 
 <script setup lang="ts">
-import { Vue3Marquee } from "vue3-marquee";
 import one from "../assets/images/Partners/1.webp";
 
 const items = [
@@ -79,7 +77,3 @@ const items = [
   },
 ];
 </script>
-
-
-
-

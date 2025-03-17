@@ -4,13 +4,13 @@
       :id="id"
       :type="type"
       :value="modelValue"
+      :class="inputClasses"
+      class="mt-1 block w-full rounded-lg transition-colors duration-200 h-14 px-4"
+      :placeholder="placeholder"
       @input="handleInput"
       @blur="$emit('blur')"
-      class="mt-1 block w-full rounded-lg transition-colors duration-200 h-14 px-4"
-      :class="inputClasses"
-      :placeholder="placeholder"
     />
-    <p v-if="showError" class="mt-1 text-sm text-red-500">
+    <p v-if="showError(props.error)" class="mt-1 text-sm text-red-500">
       {{ error }}
     </p>
   </div>
@@ -33,8 +33,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits<{
   "update:modelValue": [value: string];
+  // eslint-disable-next-line style/quote-props
   blur: [];
-  dirty: [isDirty: boolean];
+  "dirty": [isDirty: boolean];
 }>();
 
 const handleInput = (event: Event) => {
@@ -43,10 +44,10 @@ const handleInput = (event: Event) => {
   emit("dirty", true);
 };
 
-const showError = computed(() => props.error && (props.isDirty || props.isBlurred));
+const showError = (error: string | undefined) => computed(() => error && (props.isDirty || props.isBlurred));
 
 const inputClasses = computed(() => ({
-  "border border-red-500 focus:border-red-500 focus:ring focus:ring-red-500/15 focus:ring-opacity-50": showError.value,
-  "border border-gray-100 focus:border-blue-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50": !showError.value,
+  "border border-red-500 focus:border-red-500 focus:ring focus:ring-red-500/15 focus:ring-opacity-50": showError(props.error).value,
+  "border border-gray-100 focus:border-blue-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50": !showError(props.error).value,
 }));
 </script>

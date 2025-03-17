@@ -8,15 +8,15 @@
       class="flex gap-x-5 lg:bottom-[7rem] left-1/2 -translate-x-1/2 md:bottom-[5rem] bottom-[4rem] absolute z-50"
     >
       <button
-        @click="goToPrev"
         class="border-2 border-white hover:bg-white hover:text-purple-500 text-white size-10 flex justify-center items-center rounded-full transition-colors"
+        @click="goToPrev"
       >
         <svg-icon name="arrow-right" class="text-current" />
       </button>
 
       <button
-        @click="goToNext"
         class="border-2 border-white hover:bg-white hover:text-purple-500 text-white size-10 flex justify-center items-center rounded-full disabled:cursor-not-allowed hover:bg-purple-700 transition-colors"
+        @click="goToNext"
       >
         <svg-icon name="arrow-right" class="text-current rotate-180" />
       </button>
@@ -25,9 +25,8 @@
     <swiper-wrapper
       ref="swiperRef"
       class="px-0 mx-0"
-      :items="[1, 2, 3, 4]"
-      dir="rtl"
-          >
+      :items="slideItems" dir="rtl"
+    >
       <template #default="">
         <div
           class="container flex lg:justify-between mt-11 lg:flex-row flex-col-reverse items-center gap-11 lg:items-center pb-6"
@@ -62,6 +61,13 @@
 
 <script setup lang="ts">
 const swiperRef = ref();
+
+const slideItems = [
+  { id: 1, content: 'Slide 1' },
+  { id: 2, content: 'Slide 2' },
+  { id: 3, content: 'Slide 3' },
+  { id: 4, content: 'Slide 4' },
+];
 
 const goToNext = () => {
   swiperRef.value?.next();
