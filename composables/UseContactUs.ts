@@ -5,18 +5,18 @@ export const useContactUs = () => {
   const mutate = async (inputs: Form) => {
     try {
       loading.value = true;
-       await $api("contact-us", {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: inputs,
-       });
+      await $api("https://api.almaseya.net/api/contact-us", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: inputs,
+      });
     }
     catch (error) {
       err.value = error;
       // eslint-disable-next-line no-console
       console.log(error);
     }
-    finally {
+ finally {
       loading.value = false;
     }
   };
