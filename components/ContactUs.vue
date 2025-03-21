@@ -36,7 +36,7 @@
             <img src="@/assets/icons/svg/Sms.svg" alt="sms" class="size-6" />
             info@smq.com.sa
           </a>
-          <div class="flex items-center justify-center gap-x-4 mt-6">
+          <!-- <div class="flex items-center justify-center gap-x-4 mt-6">
             <nuxt-link
               v-for="(link, index) in socialLinks"
               :key="index"
@@ -45,7 +45,7 @@
             >
               <SvgIcon :name="link.icon" class="size-7" />
             </nuxt-link>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

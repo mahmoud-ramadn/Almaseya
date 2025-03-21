@@ -5,7 +5,7 @@ export const useContactUs = () => {
   const mutate = async (inputs: Form) => {
     try {
       loading.value = true;
-       await $api("https://api.almaseya.net/api/contact-us", {
+       await $api("contact-us", {
          method: "POST",
          headers: { "Content-Type": "application/json" },
          body: inputs,
